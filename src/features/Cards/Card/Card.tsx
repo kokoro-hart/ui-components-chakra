@@ -25,7 +25,7 @@ export const Article: FC<Props> = ({ slug, title, thumbnail }) => {
         transition: "0.3s",
       }}
     >
-      <Link href={getPath.reference(slug)}>
+      <Link href={getPath.demos(slug)}>
         <Box aspectRatio={4 / 3} overflow="hidden" bg="background.300">
           <Image
             w="100%"

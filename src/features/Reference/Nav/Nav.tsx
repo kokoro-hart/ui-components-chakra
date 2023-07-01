@@ -19,7 +19,7 @@ export const Nav: FC<Props> = ({ slug }) => {
   const nav = [
     {
       name: "デモ",
-      path: getPath.reference(slug),
+      path: getPath.demos(slug),
     },
     {
       name: "導入事例",

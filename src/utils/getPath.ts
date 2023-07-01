@@ -1,6 +1,6 @@
 export const getPath = {
   home: "/",
-  reference: (slug: string) => {
+  demos: (slug: string) => {
     return `/reference/${slug}/demos`;
   },
   cases: (slug: string) => {
