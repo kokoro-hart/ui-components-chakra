@@ -13,6 +13,16 @@ export type FvProps = {
 };
 
 export const Fv: FC<FvProps> = ({ thumbnail, title, role, impetus }) => {
+  const dlList = [
+    {
+      dt: "UIの役割",
+      dd: role,
+    },
+    {
+      dt: "タイミング",
+      dd: impetus,
+    },
+  ];
   return (
     <Box py="56px" bg="background.300">
       <Container>
@@ -32,56 +42,33 @@ export const Fv: FC<FvProps> = ({ thumbnail, title, role, impetus }) => {
           </Heading>
           <Stack mt="12px">
             <List as="dl" spacing={3}>
-              <ListItem as="div" display="flex" alignItems="center" gap="17px">
-                <Box
-                  as="dt"
-                  w={{ base: "100px", md: "128px" }}
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  py="4px"
-                  borderRadius="4px"
-                  bg="primary.300"
-                  color="background.100"
-                  fontSize={{ base: "12px", md: "14px" }}
-                  fontWeight={700}
-                >
-                  UIの役割
-                </Box>
-                <Box
-                  as="dd"
-                  fontSize={{ base: "12px", md: "14px" }}
-                  fontWeight={700}
-                  w={{ base: "calc(100% - 17px - 100px)", md: "calc(100% - 17px - 128px)" }}
-                >
-                  {role}
-                </Box>
-              </ListItem>
-              <ListItem as="div" display="flex" gap="17px" alignItems="center">
-                <Box
-                  as="dt"
-                  w={{ base: "100px", md: "128px" }}
-                  display="flex"
-                  justifyContent="center"
-                  alignItems="center"
-                  py="4px"
-                  borderRadius="4px"
-                  bg="primary.300"
-                  color="background.100"
-                  fontSize={{ base: "12px", md: "14px" }}
-                  fontWeight={700}
-                >
-                  タイミング
-                </Box>
-                <Box
-                  as="dd"
-                  fontSize={{ base: "12px", md: "14px" }}
-                  fontWeight={700}
-                  w={{ base: "calc(100% - 17px - 100px)", md: "calc(100% - 17px - 128px)" }}
-                >
-                  {impetus}
-                </Box>
-              </ListItem>
+              {dlList.map(({ dt, dd }) => (
+                <ListItem as="div" display="flex" alignItems="center" gap="17px" key={dt}>
+                  <Box
+                    as="dt"
+                    w={{ base: "100px", md: "128px" }}
+                    display="flex"
+                    justifyContent="center"
+                    alignItems="center"
+                    py="4px"
+                    borderRadius="4px"
+                    bg="primary.300"
+                    color="background.100"
+                    fontSize={{ base: "12px", md: "14px" }}
+                    fontWeight={700}
+                  >
+                    {dt}
+                  </Box>
+                  <Box
+                    as="dd"
+                    fontSize={{ base: "12px", md: "14px" }}
+                    fontWeight={700}
+                    w={{ base: "calc(100% - 17px - 100px)", md: "calc(100% - 17px - 128px)" }}
+                  >
+                    {dd}
+                  </Box>
+                </ListItem>
+              ))}
             </List>
           </Stack>
         </Stack>

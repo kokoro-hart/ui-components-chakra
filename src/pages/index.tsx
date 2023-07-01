@@ -11,7 +11,8 @@ const Home: FC = () => {
   const HeadProps = {
     url: getPath.home,
     title: "開発者のためのUIメモ帳",
-    description: "",
+    description:
+      "WebサイトやWebアプリでよく使用されるUIのバリエーションや事例をまとめています。学習や実装パターンの把握のリファレンスとしてご活用ください。",
     ogImage: "",
   };
   return (
@@ -30,7 +31,7 @@ const Home: FC = () => {
         </Heading>
 
         <Text fontSize={{ base: "14px", md: "15px" }} mt="32px">
-          WebサイトやWebアプリでよく使用されるUIバリエーションや事例をまとめています。学習や実装パターンの把握のリファレンスとしてご活用ください。
+          WebサイトやWebアプリでよく使用されるUIのバリエーションや事例をまとめています。学習や実装パターンの把握のリファレンスとしてご活用ください。
         </Text>
 
         <Box as="div" mt={{ base: "32px", md: "48px" }}>
