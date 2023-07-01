@@ -1,17 +1,20 @@
-import Head from "next/head";
 import { FC } from "react";
 
+import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
+import { Head } from "@/components/Layouts/Head";
+import { getPath } from "@/utils";
+
 const Home: FC = () => {
+  const HeadProps = {
+    url: getPath.home,
+    title: "開発者のためのUIメモ帳",
+    description: "",
+    ogImage: "",
+  };
   return (
     <>
-      <Head>
-        <title>Home Page</title>
-        <meta name="description" content="Home Page" />
-      </Head>
-
-      <main>
-        <h1>Home Page</h1>
-      </main>
+      <Head {...HeadProps} />
+      <AppLayout>Home Page</AppLayout>
     </>
   );
 };
