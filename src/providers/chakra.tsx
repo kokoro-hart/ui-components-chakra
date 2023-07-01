@@ -16,6 +16,17 @@ const theme = extendTheme({
     global: {
       body: {
         color: "text.300",
+        bg: "background.200",
+      },
+    },
+  },
+
+  components: {
+    Text: {
+      variants: {
+        outline: {
+          fontSize: { base: "14px", md: "16px" },
+        },
       },
     },
   },

@@ -19,10 +19,12 @@ export const colors: Colors = {
     300: "#383838",
   },
   border: {
-    100: "#d4dbdf",
+    100: "#5c93bb2b",
+    200: "#d4dbdf",
   },
   background: {
     100: "#fff",
     200: "#f0f5f9",
+    300: "linear-gradient(-60deg,#fbf6ff,#eff8ff)",
   },
 };

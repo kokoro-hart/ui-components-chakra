@@ -1,7 +1,10 @@
+import { Box, Heading, Text } from "@chakra-ui/react";
+import { Image } from "@chakra-ui/react";
 import { FC } from "react";
 
 import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
 import { Head } from "@/components/Layouts/Head";
+import { Articles } from "@/features/Articles/Articles";
 import { getPath } from "@/utils";
 
 const Home: FC = () => {
@@ -14,7 +17,26 @@ const Home: FC = () => {
   return (
     <>
       <Head {...HeadProps} />
-      <AppLayout>Home Page</AppLayout>
+      <AppLayout>
+        <Heading
+          as="h1"
+          fontSize={{ base: "22px", md: "28px" }}
+          display="flex"
+          gap="10px"
+          alignItems="center "
+        >
+          <Image boxSize={{ base: "22px", md: "28px" }} src="/image/aice.svg" alt="Dan Abramov" />
+          開発者のためのUIメモ帳
+        </Heading>
+
+        <Text fontSize={{ base: "14px", md: "15px" }} mt="32px">
+          WebサイトやWebアプリでよく使用されるUIバリエーションや事例をまとめています。学習や実装パターンの把握のリファレンスとしてご活用ください。
+        </Text>
+
+        <Box as="div" mt={{ base: "32px", md: "48px" }}>
+          <Articles />
+        </Box>
+      </AppLayout>
     </>
   );
 };
