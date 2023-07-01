@@ -4,7 +4,7 @@ import { FC } from "react";
 
 import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
 import { Head } from "@/components/Layouts/Head";
-import { Articles } from "@/features/Articles/Articles";
+import { Articles } from "@/features/Cards/Cards";
 import { getPath } from "@/utils";
 
 const Home: FC = () => {
