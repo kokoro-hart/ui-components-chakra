@@ -6,12 +6,11 @@ type Colors = {
 
 export const colors: Colors = {
   primary: {
-    100: "#bee3f8",
-    200: "#90cdf4",
-    300: "#63b3ed",
-    400: "#4299e1",
-    500: "#3182ce",
-    600: "#2b6cb0",
+    100: "#eee7ff",
+    200: "#d0bfff",
+    300: "#a389f4",
+    400: "#7e63e6",
+    500: "#5d39b1",
   },
   text: {
     100: "#000d257a",

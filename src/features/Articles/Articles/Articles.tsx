@@ -6,41 +6,36 @@ import { Article } from "../Article/Article";
 export const Articles = () => {
   const articles = [
     {
-      id: "1",
-      titleJa: "アコーディオン",
-      titleEn: "Accordion",
+      slug: "accordion",
+      title: "アコーディオン",
       thumbnail: {
         src: "/image/accordion.svg",
       },
     },
     {
-      id: "2",
-      titleJa: "タブ",
-      titleEn: "Tab",
+      slug: "tab",
+      title: "タブ",
       thumbnail: {
         src: "/image/tabs.svg",
       },
     },
     {
-      id: "3",
-      titleJa: "ローディング",
-      titleEn: "Loading",
+      slug: "loading",
+      title: "ローディング",
       thumbnail: {
         src: "/image/progress.svg",
       },
     },
     {
-      id: "4",
-      titleJa: "モーダル",
-      titleEn: "Modal",
+      slug: "modal",
+      title: "モーダル",
       thumbnail: {
         src: "/image/modal.svg",
       },
     },
     {
-      id: "5",
-      titleJa: "トースト",
-      titleEn: "Toast",
+      slug: "toast",
+      title: "トースト",
       thumbnail: {
         src: "/image/toast.svg",
       },
@@ -52,7 +47,7 @@ export const Articles = () => {
       gap={{ base: 4, md: 6 }}
     >
       {articles.map((article) => (
-        <GridItem key={article.id}>
+        <GridItem key={article.slug}>
           <Article {...article} />
         </GridItem>
       ))}
