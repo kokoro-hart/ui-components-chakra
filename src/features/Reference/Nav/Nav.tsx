@@ -22,7 +22,7 @@ export const Nav: FC<Props> = ({ slug }) => {
       path: getPath.demos(slug),
     },
     {
-      name: "導入事例",
+      name: "事例集",
       path: getPath.cases(slug),
     },
     {

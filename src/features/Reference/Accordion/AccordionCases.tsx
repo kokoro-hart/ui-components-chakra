@@ -182,7 +182,7 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             as="button"
             type="button"
             w={{ base: "100%", md: "100%" }}
-            mt={{ base: "8px", md: "12px" }}
+            mt={{ base: "24px", md: "32px" }}
             onClick={() => handleOpenModal(zozo.heading, zozo.video, zozo.site, "5xl")}
             borderRadius={{ base: "8px", md: "12px" }}
             overflow="hidden"
