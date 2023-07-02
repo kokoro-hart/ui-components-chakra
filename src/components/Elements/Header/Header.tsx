@@ -8,7 +8,7 @@ import { Link } from "../Link";
 
 export const Header: FC = () => {
   return (
-    <Box as="header" bg="hsla(0,0%,100%,.5)" h="75px" position="fixed" top="0" w="100%">
+    <Box as="header" bg="hsla(0,0%,100%,.5)" h="75px" position="fixed" top="0" w="100%" zIndex="10">
       <Container h="100%" display="flex" alignItems="center">
         <Link href={getPath.home}>
           <Flex gap="8px" alignItems="center">

@@ -20,7 +20,7 @@ const Demos = () => {
       <Head {...HeadProps} />
       <Container mt={{ base: "32px", md: "40px" }}>
         <Nav slug="accordion" />
-        <AccordionDemos />
+        <AccordionDemos mt={{ base: "32px", md: "40px" }} />
       </Container>
     </ReferenceLayout>
   );

@@ -3,7 +3,7 @@ import React from "react";
 import { Container } from "@/components/Layouts/Container";
 import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
-import { fv } from "@/features/Reference/Accordion/";
+import { AccordionCases, fv } from "@/features/Reference/Accordion/";
 import { Nav } from "@/features/Reference/Nav";
 import { getPath } from "@/utils";
 
@@ -20,6 +20,7 @@ const Cases = () => {
       <Head {...HeadProps} />
       <Container mt={{ base: "32px", md: "40px" }}>
         <Nav slug="accordion" />
+        <AccordionCases mt={{ base: "32px", md: "40px" }} />
       </Container>
     </ReferenceLayout>
   );
