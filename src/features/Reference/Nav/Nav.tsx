@@ -26,8 +26,8 @@ export const Nav: FC<Props> = ({ slug }) => {
       path: getPath.cases(slug),
     },
     {
-      name: "UIフレームワーク",
-      path: getPath.frameworks(slug),
+      name: "リソース集",
+      path: getPath.resources(slug),
     },
   ];
 

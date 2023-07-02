@@ -6,7 +6,7 @@ export const getPath = {
   cases: (slug: string) => {
     return `/reference/${slug}/cases`;
   },
-  frameworks: (slug: string) => {
-    return `/reference/${slug}/frameworks`;
+  resources: (slug: string) => {
+    return `/reference/${slug}/resources`;
   },
 };
