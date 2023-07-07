@@ -1,6 +1,6 @@
 export const fv = {
   thumbnail: {
-    src: "/image/accordion.svg",
+    src: "/image/thumbnail/accordion.svg",
   },
   title: "Accordion（アコーディオン）",
   role: "連続する内容をまとめ、項目の全体像を先に伝える",

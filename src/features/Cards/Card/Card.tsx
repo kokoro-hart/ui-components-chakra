@@ -12,7 +12,7 @@ type Props = {
   };
 };
 
-export const Article: FC<Props> = ({ slug, title, thumbnail }) => {
+export const Card: FC<Props> = ({ slug, title, thumbnail }) => {
   return (
     <Box
       as="article"

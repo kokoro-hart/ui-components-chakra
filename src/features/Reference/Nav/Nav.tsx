@@ -18,15 +18,15 @@ export const Nav: FC<Props> = ({ slug }) => {
 
   const nav = [
     {
-      name: "デモ",
+      name: "実装パターン",
       path: getPath.demos(slug),
     },
     {
-      name: "事例集",
+      name: "デザインパターン",
       path: getPath.cases(slug),
     },
     {
-      name: "リソース集",
+      name: "参考記事",
       path: getPath.resources(slug),
     },
   ];

@@ -1,56 +1,30 @@
-import { Grid, GridItem } from "@chakra-ui/react";
+import { Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
 import React from "react";
 
-import { Article } from "../Card/Card";
+import { uis } from "@/data";
 
-export const Articles = () => {
-  const articles = [
-    {
-      slug: "accordion",
-      title: "アコーディオン",
-      thumbnail: {
-        src: "/image/accordion.svg",
-      },
-    },
-    {
-      slug: "tab",
-      title: "タブ",
-      thumbnail: {
-        src: "/image/tabs.svg",
-      },
-    },
-    {
-      slug: "loading",
-      title: "ローディング",
-      thumbnail: {
-        src: "/image/progress.svg",
-      },
-    },
-    {
-      slug: "modal",
-      title: "モーダル",
-      thumbnail: {
-        src: "/image/modal.svg",
-      },
-    },
-    {
-      slug: "toast",
-      title: "トースト",
-      thumbnail: {
-        src: "/image/toast.svg",
-      },
-    },
-  ];
+import { Card } from "../Card/Card";
+
+export const Cards = () => {
   return (
-    <Grid
-      templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)" }}
-      gap={{ base: 4, md: 6 }}
-    >
-      {articles.map((article) => (
-        <GridItem key={article.slug}>
-          <Article {...article} />
-        </GridItem>
+    <Stack spacing={{ base: "40px", md: "56px" }}>
+      {uis.map(({ heading, contents }) => (
+        <Stack as="section" key={heading} spacing={{ base: "12px", md: "20px" }}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
+            {heading}
+          </Heading>
+          <Grid
+            templateColumns={{ base: "repeat(2, 1fr)", sm: "repeat(3, 1fr)" }}
+            gap={{ base: 4, md: 6 }}
+          >
+            {contents.map((content) => (
+              <GridItem key={content.slug}>
+                <Card {...content} />
+              </GridItem>
+            ))}
+          </Grid>
+        </Stack>
       ))}
-    </Grid>
+    </Stack>
   );
 };

@@ -7,7 +7,7 @@ type Props = ChakraProps & {
 
 export const Container: FC<Props> = ({ children, ...props }) => {
   return (
-    <ChakraContainer maxW="878px" px={{ base: "20px", md: "40px" }} {...props}>
+    <ChakraContainer maxW="960px" px={{ base: "20px", md: "40px" }} {...props}>
       {children}
     </ChakraContainer>
   );

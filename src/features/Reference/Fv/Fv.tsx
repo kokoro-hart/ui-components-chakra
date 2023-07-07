@@ -24,7 +24,7 @@ export const Fv: FC<FvProps> = ({ thumbnail, title, role, impetus }) => {
     },
   ];
   return (
-    <Box py="56px" bg="background.300">
+    <Box pt="16px" pb="56px" bg="background.300" border="1px solid" borderColor="border.100">
       <Container>
         <Stack alignItems="center">
           <Image

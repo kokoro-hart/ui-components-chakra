@@ -1,12 +1,12 @@
 export const getPath = {
   home: "/",
   demos: (slug: string) => {
-    return `/reference/${slug}/demos`;
+    return `/reference/${slug.toLowerCase()}/demos`;
   },
   cases: (slug: string) => {
-    return `/reference/${slug}/cases`;
+    return `/reference/${slug.toLowerCase()}/cases`;
   },
   resources: (slug: string) => {
-    return `/reference/${slug}/resources`;
+    return `/reference/${slug.toLowerCase()}/resources`;
   },
 };

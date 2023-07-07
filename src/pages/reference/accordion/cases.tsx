@@ -1,14 +1,12 @@
 import React from "react";
 
-import { Container } from "@/components/Layouts/Container";
-import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
 import { AccordionCases, fv } from "@/features/Reference/Accordion/";
 import { Nav } from "@/features/Reference/Nav";
 import { getPath } from "@/utils";
 
 const Cases = () => {
-  const HeadProps = {
+  const head = {
     url: getPath.cases("accordion"),
     title: "アコーディオン - 開発者のためのUIメモ帳",
     description:
@@ -16,12 +14,9 @@ const Cases = () => {
     ogImage: "",
   };
   return (
-    <ReferenceLayout fv={fv}>
-      <Head {...HeadProps} />
-      <Container mt={{ base: "32px", md: "40px" }}>
-        <Nav slug="accordion" />
-        <AccordionCases mt={{ base: "32px", md: "40px" }} />
-      </Container>
+    <ReferenceLayout fv={fv} head={head}>
+      <Nav slug="accordion" />
+      <AccordionCases mt={{ base: "32px", md: "40px" }} />
     </ReferenceLayout>
   );
 };

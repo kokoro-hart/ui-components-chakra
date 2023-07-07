@@ -1,7 +1,5 @@
 import { FC } from "react";
 
-import { Container } from "@/components/Layouts/Container";
-import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
 import { AccordionResources, fv, resources } from "@/features/Reference/Accordion";
 import { getMetaData } from "@/features/Reference/api";
@@ -26,7 +24,7 @@ type Props = {
 const Resources: FC<Props> = ({ metaData }) => {
   console.log(metaData);
 
-  const HeadProps = {
+  const head = {
     url: getPath.resources("accordion"),
     title: "アコーディオン - 開発者のためのUIメモ帳",
     description:
@@ -34,12 +32,9 @@ const Resources: FC<Props> = ({ metaData }) => {
     ogImage: "",
   };
   return (
-    <ReferenceLayout fv={fv}>
-      <Head {...HeadProps} />
-      <Container mt={{ base: "32px", md: "40px" }}>
-        <Nav slug="accordion" />
-        <AccordionResources mt={{ base: "32px", md: "40px" }} metaData={metaData} />
-      </Container>
+    <ReferenceLayout fv={fv} head={head}>
+      <Nav slug="accordion" />
+      <AccordionResources mt={{ base: "32px", md: "40px" }} metaData={metaData} />
     </ReferenceLayout>
   );
 };

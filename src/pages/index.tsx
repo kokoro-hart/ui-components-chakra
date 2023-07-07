@@ -4,7 +4,7 @@ import { FC } from "react";
 
 import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
 import { Head } from "@/components/Layouts/Head";
-import { Articles } from "@/features/Cards/Cards";
+import { Cards } from "@/features/Cards/Cards";
 import { getPath } from "@/utils";
 
 const Home: FC = () => {
@@ -24,7 +24,7 @@ const Home: FC = () => {
           fontSize={{ base: "22px", md: "28px" }}
           display="flex"
           gap="10px"
-          alignItems="center "
+          alignItems="center"
         >
           <Image boxSize={{ base: "22px", md: "28px" }} src="/image/aice.svg" alt="Dan Abramov" />
           開発者のためのUIメモ帳
@@ -35,7 +35,7 @@ const Home: FC = () => {
         </Text>
 
         <Box as="div" mt={{ base: "32px", md: "48px" }}>
-          <Articles />
+          <Cards />
         </Box>
       </AppLayout>
     </>
