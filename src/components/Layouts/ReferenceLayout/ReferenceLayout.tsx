@@ -23,10 +23,12 @@ export const ReferenceLayout: FC<Props> = ({ children, fv, head }) => {
       <Header />
       <Flex justifyContent="center">
         <Sidebar />
-        <Box as="main" mt="75px" pb={{ base: "84px", md: "134px" }} bg="background.100">
+        <Container as="main" pb={{ base: "84px", md: "134px" }} bg="background.100" mt="75px">
           <Fv {...fv} />
-          <Container mt={{ base: "32px", md: "40px" }}>{children}</Container>
-        </Box>
+          <Box px={{ base: "20px", md: "40px" }} mt={{ base: "32px", md: "40px" }}>
+            {children}
+          </Box>
+        </Container>
       </Flex>
       <Footer />
     </>

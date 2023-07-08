@@ -1,14 +1,15 @@
-import { ChakraProps, Container as ChakraContainer } from "@chakra-ui/react";
+import { As, Box, ChakraProps } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
 type Props = ChakraProps & {
   children: ReactNode;
+  as?: As;
 };
 
-export const Container: FC<Props> = ({ children, ...props }) => {
+export const Container: FC<Props> = ({ children, as, ...props }) => {
   return (
-    <ChakraContainer maxW="960px" px={{ base: "20px", md: "40px" }} {...props}>
+    <Box as={as} w="100%" maxW="960px" {...props}>
       {children}
-    </ChakraContainer>
+    </Box>
   );
 };

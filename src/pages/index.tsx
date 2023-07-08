@@ -10,7 +10,7 @@ import { getPath } from "@/utils";
 const Home: FC = () => {
   const HeadProps = {
     url: getPath.home,
-    title: "開発者のためのUIメモ帳",
+    title: "開発者のUIメモ帳",
     description:
       "WebサイトやWebアプリでよく使用されるUIのバリエーションや事例をまとめています。学習や実装パターンの把握のリファレンスとしてご活用ください。",
     ogImage: "",
@@ -27,7 +27,7 @@ const Home: FC = () => {
           alignItems="center"
         >
           <Image boxSize={{ base: "22px", md: "28px" }} src="/image/aice.svg" alt="Dan Abramov" />
-          開発者のためのUIメモ帳
+          開発者のUIメモ帳
         </Heading>
 
         <Text fontSize={{ base: "14px", md: "15px" }} mt="32px">

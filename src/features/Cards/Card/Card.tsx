@@ -1,7 +1,7 @@
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
+import { Box, Heading, Image, Link, Text } from "@chakra-ui/react";
+import NextLink from "next/link";
 import { FC } from "react";
 
-import { Link } from "@/components/Elements/Link";
 import { getPath } from "@/utils";
 
 type Props = {
@@ -20,12 +20,21 @@ export const Card: FC<Props> = ({ slug, title, thumbnail }) => {
       border="1px solid"
       borderColor="border.200"
       overflow="hidden"
+      w="100%"
+      h="100%"
+      bg="background.100"
       _hover={{
         boxShadow: "md",
         transition: "0.3s",
       }}
     >
-      <Link href={getPath.demos(slug)}>
+      <Link
+        as={NextLink}
+        href={getPath.demos(slug)}
+        display="block"
+        h="100%"
+        _hover={{ textDecoration: "none" }}
+      >
         <Box aspectRatio={4 / 3} overflow="hidden" bg="background.300">
           <Image
             w="100%"
@@ -39,7 +48,7 @@ export const Card: FC<Props> = ({ slug, title, thumbnail }) => {
           />
         </Box>
 
-        <Box p="12px 10px" bg="background.100">
+        <Box p="12px 10px">
           <Heading as="h3" fontWeight={700} fontSize={{ base: "12px", md: "14px" }}>
             {title}
           </Heading>
