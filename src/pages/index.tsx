@@ -1,5 +1,4 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
-import { Image } from "@chakra-ui/react";
 import { FC } from "react";
 
 import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
@@ -26,7 +25,6 @@ const Home: FC = () => {
           gap="10px"
           alignItems="center"
         >
-          <Image boxSize={{ base: "22px", md: "28px" }} src="/image/aice.svg" alt="Dan Abramov" />
           開発者のUIメモ帳
         </Heading>
 

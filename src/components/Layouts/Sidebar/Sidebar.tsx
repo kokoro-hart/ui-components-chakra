@@ -23,15 +23,19 @@ export const Sidebar: FC<ChakraProps> = ({ ...props }) => {
       >
         {uis.map(({ heading, contents }) => (
           <Box as="section" key={heading}>
-            <Heading as="h3" fontSize="14px">
+            <Heading as="h4" fontSize="14px">
               {heading}
             </Heading>
             <List spacing="10px" mt="10px">
-              {contents.map(({ slug, title }) => (
+              {contents.map(({ slug, title, disable }) => (
                 <ListItem key={slug} fontSize="14px" fontWeight={400}>
-                  <Link as={NextLink} href={getPath.demos(slug)}>
-                    {title}
-                  </Link>
+                  {disable ? (
+                    <Box as="span">🚧 {title}</Box>
+                  ) : (
+                    <Link as={NextLink} href={getPath.demos(slug)}>
+                      {title}
+                    </Link>
+                  )}
                 </ListItem>
               ))}
             </List>

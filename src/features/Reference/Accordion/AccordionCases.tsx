@@ -83,7 +83,7 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
       />
       <Stack spacing={{ base: "48px", md: "84px" }} {...props}>
         <Box as="section">
-          <Heading as="h2" fontSize={{ base: "20px", md: "24px" }} fontWeight={700}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
             📝 複数のアイテムを一度に展開できるパターン
           </Heading>
           <Grid
@@ -173,7 +173,7 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
           </Grid>
         </Box>
         <Box as="section">
-          <Heading as="h2" fontSize={{ base: "20px", md: "24px" }} fontWeight={700}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
             📝 トグルで切り替わるパターン
           </Heading>
 

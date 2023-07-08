@@ -3,7 +3,7 @@ import { FC } from "react";
 
 export const Footer: FC<ChakraProps> = ({ ...props }) => {
   return (
-    <Box h="40px" as="footer" textAlign="center" {...props}>
+    <Box h="75px" as="footer" display="flex" alignItems="center" justifyContent="center" {...props}>
       © cocosyu 2023
     </Box>
   );

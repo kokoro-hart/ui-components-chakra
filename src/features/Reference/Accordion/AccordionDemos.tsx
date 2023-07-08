@@ -8,7 +8,7 @@ export const AccordionDemos: FC<ChakraProps> = ({ ...props }) => {
     <>
       <Stack spacing={{ base: "48px", md: "84px" }} {...props}>
         <Box as="section">
-          <Heading as="h2" fontSize={{ base: "20px", md: "24px" }}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
             📝 複数のアイテムを一度に展開できるパターン
           </Heading>
           <Box mt={{ base: "20px", md: "28px" }} bg="background.100" p="20px" borderRadius="8px">
@@ -16,7 +16,7 @@ export const AccordionDemos: FC<ChakraProps> = ({ ...props }) => {
           </Box>
         </Box>
         <Box as="section">
-          <Heading as="h2" fontSize={{ base: "20px", md: "24px" }}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
             📝 トグルで切り替わるパターン
           </Heading>
           <Box mt={{ base: "20px", md: "28px" }} bg="background.100" p="20px" borderRadius="8px">
@@ -24,7 +24,7 @@ export const AccordionDemos: FC<ChakraProps> = ({ ...props }) => {
           </Box>
         </Box>
         <Box as="section">
-          <Heading as="h2" fontSize={{ base: "20px", md: "24px" }}>
+          <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
             📝 はじめに1つ開いておくパターン
           </Heading>
           <Box mt={{ base: "20px", md: "28px" }} bg="background.100" p="20px" borderRadius="8px">

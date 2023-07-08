@@ -38,13 +38,6 @@ export const uis = [
         },
       },
       {
-        slug: "Dropdown",
-        title: "ドロップダウンメニュー",
-        thumbnail: {
-          src: "/image/thumbnail/tabs.svg",
-        },
-      },
-      {
         slug: "Stepper",
         title: "ステッパー",
         thumbnail: {
@@ -86,6 +79,38 @@ export const uis = [
           src: "/image/thumbnail/toast.svg",
         },
       },
+      {
+        slug: "Clipboard",
+        title: "クリップボード",
+        thumbnail: {
+          src: "",
+        },
+        disable: true,
+      },
+      {
+        slug: "Dropdown",
+        title: "ドロップダウンメニュー",
+        thumbnail: {
+          src: "/image/thumbnail/tabs.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "slider",
+        title: "スライダー",
+        thumbnail: {
+          src: "/image/thumbnail/tabs.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "pagination",
+        title: "ページネーション",
+        thumbnail: {
+          src: "/image/thumbnail/tabs.svg",
+        },
+        disable: true,
+      },
     ],
   },
   {
@@ -99,11 +124,20 @@ export const uis = [
         },
       },
       {
+        slug: "trim",
+        title: "トリミング",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
         slug: "richEditor",
         title: "リッチエディター",
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
       {
         slug: "markdownEditor",
@@ -111,63 +145,11 @@ export const uis = [
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
     ],
   },
-  {
-    heading: "検索（Algolia）",
-    contents: [
-      {
-        slug: "installAlgolia",
-        title: "Algolia インストール",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "2",
-        title: "キーワード検索",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "3",
-        title: "条件絞り込み",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "3",
-        title: "ソート",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "4",
-        title: "ヒット数",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "5",
-        title: "オートコンプリート",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-      {
-        slug: "6",
-        title: "ページごとの表示件数",
-        thumbnail: {
-          src: "/image/thumbnail/editable.svg",
-        },
-      },
-    ],
-  },
+
   {
     heading: "グラフ",
     contents: [
@@ -177,39 +159,121 @@ export const uis = [
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
       {
-        slug: "2",
+        slug: "barChart",
         title: "棒グラフ（横）",
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
       {
-        slug: "3",
+        slug: "lineChart",
         title: "折れ線グラフ",
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
       {
-        slug: "3",
+        slug: "pieChart",
         title: "円グラフ",
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
       },
     ],
   },
   {
-    heading: "画面遷移",
+    heading: "インタラクション",
     contents: [
       {
-        slug: "graph",
-        title: "シームレス遷移",
+        slug: "pageTransition",
+        title: "ページ遷移",
         thumbnail: {
           src: "/image/thumbnail/editable.svg",
         },
+        disable: true,
+      },
+      {
+        slug: "svgAnimation",
+        title: "SVGアニメーション",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "scrollAnimation",
+        title: "スクロールアニメーション",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "cssAnimation",
+        title: "CSSアニメーション",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+    ],
+  },
+  {
+    heading: "検索",
+    contents: [
+      {
+        slug: "keywordSearch",
+        title: "キーワード検索",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "narrowDown",
+        title: "条件絞り込み",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "sort",
+        title: "ソート",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "hitCount",
+        title: "ヒット数表示",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "autocomplete",
+        title: "オートコンプリート",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
+      },
+      {
+        slug: "numberPerPage",
+        title: "ページごとの表示件数",
+        thumbnail: {
+          src: "/image/thumbnail/editable.svg",
+        },
+        disable: true,
       },
     ],
   },

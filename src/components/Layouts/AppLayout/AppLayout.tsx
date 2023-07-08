@@ -16,14 +16,14 @@ export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
     <>
       <Header />
 
-      <Flex justifyContent="center">
-        <Sidebar />
+      <Flex justifyContent="center" flexDirection="row-reverse">
         <Stack as="main" mt="75px" spacing="40px">
           <Container pt={{ base: "32px", md: "47px" }} px={{ base: "20px", md: "40px" }}>
             {children}
           </Container>
           <Footer />
         </Stack>
+        <Sidebar />
       </Flex>
     </>
   );
