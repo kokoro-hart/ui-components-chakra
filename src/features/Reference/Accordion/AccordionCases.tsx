@@ -40,11 +40,15 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
               heading={goodpatch.heading}
               videoSrc={goodpatch.video}
               siteSrc={goodpatch.site}
+              width={296}
+              height={555}
             />
             <VideoModalTrigger
               heading={richka.heading}
               videoSrc={richka.video}
               siteSrc={richka.site}
+              width={296}
+              height={555}
             />
           </Grid>
         </Box>
@@ -59,6 +63,8 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             heading={zozo.heading}
             videoSrc={zozo.video}
             siteSrc={zozo.site}
+            width={880}
+            height={593}
             size="5xl"
           />
         </Box>

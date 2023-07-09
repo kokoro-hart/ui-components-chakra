@@ -1,6 +1,6 @@
-import { Box, ChakraProps, Heading, VisuallyHidden } from "@chakra-ui/react";
+import { Box, ChakraProps, Heading, Skeleton, VisuallyHidden } from "@chakra-ui/react";
 import { css } from "@emotion/react";
-import { FC, useReducer } from "react";
+import { FC, useReducer, useState } from "react";
 
 import { VideoModal, VideoModalProps } from "../VideoModal/VideoModal";
 
@@ -81,6 +81,8 @@ type VideoModalTriggerProps = ChakraProps & {
   heading: string;
   videoSrc: string;
   siteSrc: string;
+  width: number;
+  height: number;
   size?: "xs" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "full";
 };
 
@@ -89,9 +91,12 @@ export const VideoModalTrigger: FC<VideoModalTriggerProps> = ({
   videoSrc,
   siteSrc,
   size = "md",
+  width,
+  height,
   ...props
 }) => {
   const [state, dispatch] = useReducer(reducer, initialState);
+  const [isLoading, setIsLoading] = useState(true);
 
   const handleOpenModal = (
     heading: string,
@@ -122,7 +127,25 @@ export const VideoModalTrigger: FC<VideoModalTriggerProps> = ({
         onClick={() => handleOpenModal(heading, videoSrc, siteSrc, size)}
       >
         <Box borderRadius={{ base: "8px", md: "12px" }} overflow="hidden" css={inner}>
-          <video autoPlay muted loop preload="metadata" src={videoSrc} />
+          {isLoading && (
+            <Skeleton
+              borderRadius={{ base: "8px", md: "12px" }}
+              width="100%"
+              aspectRatio={width / height}
+            />
+          )}
+          <video
+            autoPlay
+            muted
+            loop
+            preload="metadata"
+            src={videoSrc}
+            width={width}
+            height={height}
+            onPlaying={() => {
+              setIsLoading(false);
+            }}
+          />
           <Heading
             as="h3"
             mt={{ base: "3px", md: "6px" }}

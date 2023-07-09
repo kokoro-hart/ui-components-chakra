@@ -1,8 +1,17 @@
 import { Badge, Box, Heading, Image, Link, Text } from "@chakra-ui/react";
+import { css } from "@emotion/react";
 import NextLink from "next/link";
 import { FC } from "react";
 
 import { getPath } from "@/utils";
+
+const styles = css`
+  &:hover {
+    a {
+      box-shadow: var(--chakra-shadows-md);
+    }
+  }
+`;
 
 type Props = {
   slug: string;
@@ -41,15 +50,7 @@ export const Card: FC<Props> = ({ slug, title, thumbnail, disable }) => {
       </Box>
     </Box>
   ) : (
-    <Box
-      as="article"
-      w="100%"
-      h="100%"
-      _hover={{
-        boxShadow: "md",
-        transition: "0.3s",
-      }}
-    >
+    <Box as="article" w="100%" h="100%" css={styles}>
       <Link
         as={NextLink}
         href={getPath.demos(slug)}
@@ -74,7 +75,6 @@ export const Card: FC<Props> = ({ slug, title, thumbnail, disable }) => {
             objectFit="cover"
           />
         </Box>
-
         <Box p="12px 10px">
           <Heading as="h3" fontWeight={700} fontSize={{ base: "12px", md: "14px" }}>
             {title}
