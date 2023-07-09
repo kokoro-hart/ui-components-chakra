@@ -26,13 +26,23 @@ export const Sidebar: FC<ChakraProps> = ({ ...props }) => {
             <Heading as="h4" fontSize="15px">
               {heading}
             </Heading>
-            <List spacing="10px" mt="10px">
+            <List mt="10px">
               {contents.map(({ slug, title, disable }) => (
                 <ListItem key={slug} fontSize="14px" fontWeight={400}>
                   {disable ? (
-                    <Box as="span">🚧 {title}</Box>
+                    <Box as="span" py="7px" display="block" color="gray.500" fontWeight={700}>
+                      🚧 {title}
+                    </Box>
                   ) : (
-                    <Link as={NextLink} href={getPath.demos(slug)}>
+                    <Link
+                      as={NextLink}
+                      href={getPath.demos(slug)}
+                      color="gray.500"
+                      fontWeight={700}
+                      _hover={{ md: { color: "primary.400", textDecoration: "underline" } }}
+                      display="block"
+                      py="7px"
+                    >
                       {title}
                     </Link>
                   )}
