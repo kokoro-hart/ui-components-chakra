@@ -43,13 +43,8 @@ export const Card: FC<Props> = ({ slug, title, thumbnail, disable }) => {
   ) : (
     <Box
       as="article"
-      borderRadius="8px"
-      border="1px solid"
-      borderColor="border.200"
-      overflow="hidden"
       w="100%"
       h="100%"
-      bg="background.100"
       _hover={{
         boxShadow: "md",
         transition: "0.3s",
@@ -59,6 +54,11 @@ export const Card: FC<Props> = ({ slug, title, thumbnail, disable }) => {
         as={NextLink}
         href={getPath.demos(slug)}
         display="block"
+        borderRadius="8px"
+        border="1px solid"
+        borderColor="border.200"
+        bg="background.100"
+        overflow="hidden"
         h="100%"
         _hover={{ textDecoration: "none" }}
       >

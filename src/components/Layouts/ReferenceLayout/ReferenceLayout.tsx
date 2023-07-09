@@ -1,4 +1,4 @@
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, SkipNavContent, SkipNavLink } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
 import { Header } from "@/components/Elements/Header";
@@ -6,22 +6,20 @@ import { Fv } from "@/features/Reference/Fv";
 import type { FvProps } from "@/features/Reference/Fv";
 
 import { Container } from "../Container";
-import { Head, HeadProps } from "../Head";
 import { Sidebar } from "../Sidebar";
 
 type Props = {
   fv: FvProps;
   children: ReactNode;
-  head: HeadProps;
 };
 
-export const ReferenceLayout: FC<Props> = ({ children, fv, head }) => {
+export const ReferenceLayout: FC<Props> = ({ children, fv }) => {
   return (
     <>
-      <Head {...head} />
+      <SkipNavLink>メインコンテンツにスキップ</SkipNavLink>
       <Header />
-      <Flex justifyContent="center">
-        <Sidebar />
+      <Flex justifyContent="center" flexDirection="row-reverse">
+        <SkipNavContent />
         <Container
           as="main"
           pb={{ base: "84px", md: "134px" }}
@@ -34,6 +32,7 @@ export const ReferenceLayout: FC<Props> = ({ children, fv, head }) => {
             {children}
           </Box>
         </Container>
+        <Sidebar />
       </Flex>
     </>
   );

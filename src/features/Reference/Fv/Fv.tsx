@@ -37,7 +37,7 @@ export const Fv: FC<FvProps> = ({ thumbnail, title, role, impetus }) => {
             htmlHeight="188"
             objectFit="cover"
           />
-          <Heading as="h2" fontSize={{ base: "24px", md: "30px" }}>
+          <Heading as="h1" fontSize={{ base: "24px", md: "30px" }}>
             {title}
           </Heading>
           <Stack mt="12px">

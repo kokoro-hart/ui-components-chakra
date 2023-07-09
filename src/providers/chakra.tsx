@@ -17,6 +17,10 @@ const theme = extendTheme({
       body: {
         color: "text.300",
         bg: "background.200",
+        bgImage: 'url("/image/body.svg")',
+        bgRepeat: "repeat",
+        bgColor: "#f3f4f6",
+        bgSize: "200px",
       },
     },
   },

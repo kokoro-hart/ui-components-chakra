@@ -1,4 +1,4 @@
-import { Flex, Stack } from "@chakra-ui/react";
+import { Flex, SkipNavContent, SkipNavLink, Stack } from "@chakra-ui/react";
 import { ReactNode, FC } from "react";
 
 import { Footer } from "@/components/Elements/Footer";
@@ -14,9 +14,11 @@ type AppLayoutProps = {
 export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
   return (
     <>
+      <SkipNavLink>メインコンテンツにスキップ</SkipNavLink>
       <Header />
 
       <Flex justifyContent="center" flexDirection="row-reverse">
+        <SkipNavContent />
         <Stack as="main" mt="75px" spacing="40px">
           <Container pt={{ base: "32px", md: "47px" }} px={{ base: "20px", md: "40px" }}>
             {children}

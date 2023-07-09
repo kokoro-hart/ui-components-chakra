@@ -22,14 +22,14 @@ export const Accordion: FC<Props> = ({ defaultIndex, allowMultiple, allowToggle 
       allowToggle={allowToggle}
     >
       <AccordionItem>
-        <h2>
+        <h3>
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               アイテム 1
             </Box>
             <AccordionIcon />
           </AccordionButton>
-        </h2>
+        </h3>
         <AccordionPanel pb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -38,14 +38,14 @@ export const Accordion: FC<Props> = ({ defaultIndex, allowMultiple, allowToggle 
       </AccordionItem>
 
       <AccordionItem>
-        <h2>
+        <h3>
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               アイテム 2
             </Box>
             <AccordionIcon />
           </AccordionButton>
-        </h2>
+        </h3>
         <AccordionPanel pb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation
@@ -54,14 +54,14 @@ export const Accordion: FC<Props> = ({ defaultIndex, allowMultiple, allowToggle 
       </AccordionItem>
 
       <AccordionItem>
-        <h2>
+        <h3>
           <AccordionButton>
             <Box as="span" flex="1" textAlign="left">
               アイテム 3
             </Box>
             <AccordionIcon />
           </AccordionButton>
-        </h2>
+        </h3>
         <AccordionPanel pb={4}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation

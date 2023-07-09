@@ -7,14 +7,7 @@ const Document = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <body
-        style={{
-          backgroundImage: "url(https://hidane.app/_nuxt/img/bg.262fe15.svg)",
-          backgroundSize: "200px",
-          backgroundRepeat: "repeat",
-          backgroundColor: "#f3f4f6",
-        }}
-      >
+      <body>
         <Main />
         <NextScript />
       </body>
