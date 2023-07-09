@@ -1,8 +1,9 @@
-import { Box, ChakraProps, Grid, Heading, Stack, Link } from "@chakra-ui/react";
+import { Box, ChakraProps, Grid, Heading, Stack } from "@chakra-ui/react";
 import { FC, useReducer } from "react";
 
 import { VideoModalProps } from "../VideoModal";
 import { VideoModal } from "../VideoModal";
+import { VideoModalTrigger } from "../VideoModalTrigger";
 
 type State = Omit<VideoModalProps, "onClose">;
 
@@ -92,84 +93,16 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             gap={{ base: 4, md: 6 }}
             mt={{ base: "24px", md: "32px" }}
           >
-            <Box
-              position="relative"
-              as="button"
-              type="button"
+            <VideoModalTrigger
+              heading={goodpatch.heading}
+              videoSrc={goodpatch.video}
               onClick={() => handleOpenModal(goodpatch.heading, goodpatch.video, goodpatch.site)}
-              borderRadius={{ base: "8px", md: "12px" }}
-              overflow="hidden"
-              _after={{
-                content: `"詳細を見る"`,
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "background.100",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                position: "absolute",
-                top: "0",
-                left: "0",
-                w: "100%",
-                h: "100%",
-                bg: "rgba(0,0,0,.5)",
-                opacity: 0,
-                transition: "opacity .6s cubic-bezier(0.22, 1, 0.36, 1)",
-              }}
-              _hover={{
-                md: { _after: { opacity: 1 } },
-              }}
-            >
-              <video autoPlay muted loop preload="metadata" src={goodpatch.video} />
-              <Link
-                href={goodpatch.site}
-                target="_blank"
-                mt={{ base: "3px", md: "6px" }}
-                display="block"
-                fontSize={{ base: "12px", md: "14px" }}
-              >
-                {goodpatch.heading}
-              </Link>
-            </Box>
-            <Box
-              position="relative"
-              as="button"
-              type="button"
+            />
+            <VideoModalTrigger
+              heading={richka.heading}
+              videoSrc={richka.video}
               onClick={() => handleOpenModal(richka.heading, richka.video, richka.site)}
-              borderRadius={{ base: "8px", md: "12px" }}
-              overflow="hidden"
-              _after={{
-                content: `"詳細を見る"`,
-                fontSize: "18px",
-                fontWeight: 700,
-                color: "background.100",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                position: "absolute",
-                top: "0",
-                left: "0",
-                w: "100%",
-                h: "100%",
-                bg: "rgba(0,0,0,.5)",
-                opacity: 0,
-                transition: "opacity .6s cubic-bezier(0.22, 1, 0.36, 1)",
-              }}
-              _hover={{
-                md: { _after: { opacity: 1 } },
-              }}
-            >
-              <video autoPlay muted loop preload="metadata" src={richka.video} />
-              <Link
-                href={richka.site}
-                target="_blank"
-                mt={{ base: "3px", md: "6px" }}
-                display="block"
-                fontSize={{ base: "12px", md: "14px" }}
-              >
-                {richka.heading}
-              </Link>
-            </Box>
+            />
           </Grid>
         </Box>
         <Box as="section">
@@ -177,47 +110,13 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             📝 トグルで切り替わるパターン
           </Heading>
 
-          <Box
-            position="relative"
-            as="button"
-            type="button"
-            w={{ base: "100%", md: "100%" }}
+          <VideoModalTrigger
+            w="100%"
             mt={{ base: "24px", md: "32px" }}
+            heading={zozo.heading}
+            videoSrc={zozo.video}
             onClick={() => handleOpenModal(zozo.heading, zozo.video, zozo.site, "5xl")}
-            borderRadius={{ base: "8px", md: "12px" }}
-            overflow="hidden"
-            _after={{
-              content: `"詳細を見る"`,
-              fontSize: "18px",
-              fontWeight: 700,
-              color: "background.100",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              position: "absolute",
-              top: "0",
-              left: "0",
-              w: "100%",
-              h: "100%",
-              bg: "rgba(0,0,0,.5)",
-              opacity: 0,
-              transition: "opacity .6s cubic-bezier(0.22, 1, 0.36, 1)",
-            }}
-            _hover={{
-              md: { _after: { opacity: 1 } },
-            }}
-          >
-            <video autoPlay muted loop preload="metadata" src={zozo.video} />
-            <Link
-              href={zozo.site}
-              target="_blank"
-              mt={{ base: "3px", md: "6px" }}
-              display="block"
-              fontSize={{ base: "12px", md: "14px" }}
-            >
-              {zozo.heading}
-            </Link>
-          </Box>
+          />
         </Box>
       </Stack>
     </>

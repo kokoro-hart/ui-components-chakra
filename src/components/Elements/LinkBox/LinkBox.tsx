@@ -54,7 +54,12 @@ export const LinkBox: FC<LinkBoxProps> = ({ content }) => {
             noOfLines={{ base: 2, md: 1 }}
             fontSize={{ base: "14px", md: "16px" }}
           >
-            <LinkOverlay href={content["og:url"]} target="_blank" _before={{ zIndex: "1" }}>
+            <LinkOverlay
+              href={content["og:url"]}
+              _focusVisible={{ _before: { boxShadow: "outline" } }}
+              target="_blank"
+              _before={{ zIndex: "1" }}
+            >
               {content["og:title"]}
             </LinkOverlay>
           </Heading>

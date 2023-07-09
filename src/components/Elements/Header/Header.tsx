@@ -1,7 +1,9 @@
 import { Box, Button, Container, Flex, Image, Link, Text } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { FC } from "react";
+import { FaGithub } from "react-icons/fa";
 
+import { IconHeart } from "@/components/assets";
 import { getPath } from "@/utils";
 
 export const Header: FC = () => {
@@ -12,7 +14,7 @@ export const Header: FC = () => {
         display="flex"
         px={{ base: "20px", md: "40px" }}
         alignItems="center"
-        maxW="1270px"
+        maxW="1308px"
         justifyContent="space-between"
       >
         <Link as={NextLink} href={getPath.home} _hover={{ textDecoration: "none" }}>
@@ -20,9 +22,10 @@ export const Header: FC = () => {
             <Image
               boxSize={{ base: "24px", md: "32px" }}
               src="/image/aice.svg"
-              alt="Dan Abramov"
+              alt=""
               htmlWidth="24"
               htmlHeight="24"
+              aria-hidden="true"
             />
             <Text fontSize={{ base: "16px", md: "18px" }} fontWeight={700}>
               開発者のUIメモ帳
@@ -35,34 +38,17 @@ export const Header: FC = () => {
             target="_blank"
             _hover={{ textDecoration: "none" }}
           >
-            <Image
-              boxSize={{ base: "18px", md: "20px" }}
-              src="/image/icon/github.svg"
-              alt=""
-              htmlWidth="20"
-              htmlHeight="20"
-            />
+            <FaGithub size={24} />
           </Link>
           <Button
-            as="a"
-            href=""
-            target="_blank"
-            fontSize={{ base: "14px" }}
-            p={{ base: "10px" }}
-            display="flex"
-            gap="5px"
-            alignItems="center"
+            leftIcon={<IconHeart />}
+            border="1px solid"
+            borderColor="gray.200"
+            fontSize="14px"
+            height={9}
+            lineHeight="1"
           >
-            <Image
-              boxSize={{ base: "16px", md: "18px" }}
-              src="/image/icon/heart.svg"
-              alt=""
-              htmlWidth="16"
-              htmlHeight="16"
-            />
-            <Text as="span" ml="4px">
-              応援する
-            </Text>
+            応援する
           </Button>
         </Flex>
       </Container>
