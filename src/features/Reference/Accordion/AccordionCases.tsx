@@ -1,40 +1,7 @@
 import { Box, ChakraProps, Grid, Heading, Stack } from "@chakra-ui/react";
-import { FC, useReducer } from "react";
+import { FC } from "react";
 
-import { VideoModalProps } from "../VideoModal";
-import { VideoModal } from "../VideoModal";
 import { VideoModalTrigger } from "../VideoModalTrigger";
-
-type State = Omit<VideoModalProps, "onClose">;
-
-type Action = Omit<State, "isOpen"> & {
-  type: "OPEN_MODAL" | "CLOSE_MODAL";
-};
-
-const initialState: State = {
-  isOpen: false,
-  heading: "",
-  videoSrc: "",
-  linkSrc: "",
-  size: "md",
-};
-
-const reducer = (state: State, action: Action) => {
-  switch (action.type) {
-    case "OPEN_MODAL":
-      return {
-        isOpen: true,
-        heading: action.heading,
-        videoSrc: action.videoSrc,
-        linkSrc: action.linkSrc,
-        size: action.size,
-      };
-    case "CLOSE_MODAL":
-      return initialState;
-    default:
-      return state;
-  }
-};
 
 export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
   const cases = {
@@ -56,32 +23,8 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
   };
 
   const { goodpatch, richka, zozo } = cases;
-
-  const [state, dispatch] = useReducer(reducer, initialState);
-
-  const handleOpenModal = (
-    heading: string,
-    videoSrc: string,
-    linkSrc: string,
-    size: State["size"] = "md",
-  ) => {
-    dispatch({ type: "OPEN_MODAL", heading, videoSrc, linkSrc, size });
-  };
-
-  const handleCloseModal = () => {
-    dispatch({ type: "CLOSE_MODAL" });
-  };
-
   return (
     <>
-      <VideoModal
-        isOpen={state.isOpen}
-        onClose={handleCloseModal}
-        heading={state.heading}
-        videoSrc={state.videoSrc}
-        linkSrc={state.linkSrc}
-        size={state.size}
-      />
       <Stack spacing={{ base: "48px", md: "84px" }} {...props}>
         <Box as="section">
           <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
@@ -96,12 +39,12 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             <VideoModalTrigger
               heading={goodpatch.heading}
               videoSrc={goodpatch.video}
-              onClick={() => handleOpenModal(goodpatch.heading, goodpatch.video, goodpatch.site)}
+              siteSrc={goodpatch.site}
             />
             <VideoModalTrigger
               heading={richka.heading}
               videoSrc={richka.video}
-              onClick={() => handleOpenModal(richka.heading, richka.video, richka.site)}
+              siteSrc={richka.site}
             />
           </Grid>
         </Box>
@@ -115,7 +58,8 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
             mt={{ base: "24px", md: "32px" }}
             heading={zozo.heading}
             videoSrc={zozo.video}
-            onClick={() => handleOpenModal(zozo.heading, zozo.video, zozo.site, "5xl")}
+            siteSrc={zozo.site}
+            size="5xl"
           />
         </Box>
       </Stack>
