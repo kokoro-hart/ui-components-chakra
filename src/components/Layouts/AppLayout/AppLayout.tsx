@@ -1,4 +1,4 @@
-import { Flex, SkipNavContent, SkipNavLink, Stack } from "@chakra-ui/react";
+import { Flex, SkipNavContent, SkipNavLink } from "@chakra-ui/react";
 import { ReactNode, FC } from "react";
 
 import { Footer } from "@/components/Elements/Footer";
@@ -19,12 +19,15 @@ export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
 
       <Flex justifyContent="center" flexDirection="row-reverse">
         <SkipNavContent />
-        <Stack as="main" mt="75px" spacing="40px">
-          <Container pt={{ base: "32px", md: "47px" }} px={{ base: "20px", md: "40px" }}>
-            {children}
-          </Container>
+        <Container
+          as="main"
+          mt="75px"
+          pt={{ base: "32px", md: "47px" }}
+          px={{ base: "20px", md: "40px" }}
+        >
+          {children}
           <Footer />
-        </Stack>
+        </Container>
         <Sidebar />
       </Flex>
     </>
