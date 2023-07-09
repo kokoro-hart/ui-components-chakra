@@ -40,7 +40,7 @@ export const Fv: FC<FvProps> = ({ thumbnail, title, role, impetus }) => {
           <Heading as="h1" fontSize={{ base: "24px", md: "30px" }}>
             {title}
           </Heading>
-          <Stack mt="12px">
+          <Stack mt="12px" px={{ base: "20px", md: "40px" }}>
             <List as="dl" spacing={3}>
               {dlList.map(({ dt, dd }) => (
                 <ListItem as="div" display="flex" alignItems="center" gap="17px" key={dt}>

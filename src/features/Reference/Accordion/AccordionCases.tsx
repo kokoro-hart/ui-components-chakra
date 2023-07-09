@@ -25,10 +25,10 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
   const { goodpatch, richka, zozo } = cases;
   return (
     <>
-      <Stack spacing={{ base: "48px", md: "84px" }} {...props}>
+      <Stack spacing={{ base: "64px", md: "84px" }} {...props}>
         <Box as="section">
           <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
-            📝 複数のアイテムを一度に展開できるパターン
+            📝 複数のアイテムを一度に展開する
           </Heading>
           <Grid
             templateColumns={{ base: "repeat(2, 1fr)" }}
@@ -50,7 +50,7 @@ export const AccordionCases: FC<ChakraProps> = ({ ...props }) => {
         </Box>
         <Box as="section">
           <Heading as="h2" fontSize={{ base: "18px", md: "20px" }}>
-            📝 トグルで切り替わるパターン
+            📝 トグルで切り替える
           </Heading>
 
           <VideoModalTrigger
