@@ -17,7 +17,7 @@ export const AppLayout: FC<AppLayoutProps> = ({ children }) => {
       <SkipNavLink>メインコンテンツにスキップ</SkipNavLink>
       <Header />
 
-      <Flex justifyContent="center" flexDirection="row-reverse">
+      <Flex id="__next_content" justifyContent="center" flexDirection="row-reverse">
         <SkipNavContent />
         <Container
           as="main"
