@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
+import { FormsResources, fv, resources } from "@/features/Forms";
+import { Nav } from "@/features/Reference";
 import { getMetaData } from "@/features/Reference/api";
-import { FormsResources, fv, resources } from "@/features/Reference/Forms";
-import { Nav } from "@/features/Reference/Nav";
 import { MetaData } from "@/features/Reference/types";
 import { getPath } from "@/utils";
 

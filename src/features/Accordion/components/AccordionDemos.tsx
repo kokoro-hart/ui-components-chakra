@@ -1,10 +1,9 @@
 import { Box, ChakraProps, Heading, Stack } from "@chakra-ui/react";
 import { FC } from "react";
 
-import { Accordion } from "@/features/Reference/Accordion";
+import { Accordion } from "@/features/Accordion/components";
+import { ViewSourceArea } from "@/features/Reference/components/ViewSourceArea";
 import { getPath } from "@/utils";
-
-import { ViewSourceArea } from "../ViewSourceArea";
 
 export const AccordionDemos: FC<ChakraProps> = ({ ...props }) => {
   return (

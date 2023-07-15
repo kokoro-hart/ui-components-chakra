@@ -1,7 +1,7 @@
 import { Box, ChakraProps, Grid, Heading, Stack } from "@chakra-ui/react";
 import { FC } from "react";
 
-import { VideoModalTrigger } from "../VideoModalTrigger";
+import { VideoModalTrigger } from "@/features/Reference/components/VideoModalTrigger";
 
 export const FormsCases: FC<ChakraProps> = ({ ...props }) => {
   const cases = {

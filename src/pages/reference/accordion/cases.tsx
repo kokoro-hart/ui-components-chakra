@@ -2,8 +2,8 @@ import React from "react";
 
 import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
-import { AccordionCases, fv } from "@/features/Reference/Accordion/";
-import { Nav } from "@/features/Reference/Nav";
+import { AccordionCases, fv } from "@/features/Accordion";
+import { Nav } from "@/features/Reference";
 import { getPath } from "@/utils";
 
 const Cases = () => {

@@ -4,8 +4,8 @@ import { SubmitHandler } from "react-hook-form";
 
 import { Form, InputField } from "@/components/Elements/Form";
 
-import { loginSchema } from "./schema";
-import { LoginFormValues } from "./types";
+import { loginSchema } from "../schema";
+import { LoginFormValues } from "../types";
 
 export const LoginForm: FC = () => {
   const toast = useToast();

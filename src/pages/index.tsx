@@ -1,9 +1,9 @@
 import { Box, Heading, Text } from "@chakra-ui/react";
 import { FC } from "react";
 
+import { Cards } from "@/components/Elements/Cards";
 import { AppLayout } from "@/components/Layouts/AppLayout/AppLayout";
 import { Head } from "@/components/Layouts/Head";
-import { Cards } from "@/features/Cards/Cards";
 import { getPath } from "@/utils";
 
 const Home: FC = () => {

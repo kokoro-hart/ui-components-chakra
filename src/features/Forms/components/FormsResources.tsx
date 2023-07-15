@@ -2,8 +2,7 @@ import { Box, ChakraProps, Heading, List, ListItem, Stack } from "@chakra-ui/rea
 import { FC } from "react";
 
 import { LinkBox } from "@/components/Elements/LinkBox";
-
-import { MetaData } from "../types";
+import { MetaData } from "@/features/Reference";
 
 type Props = ChakraProps & {
   metaData: MetaData[];

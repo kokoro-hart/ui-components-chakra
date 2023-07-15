@@ -2,8 +2,7 @@ import { Box, Flex, SkipNavContent, SkipNavLink } from "@chakra-ui/react";
 import { FC, ReactNode } from "react";
 
 import { Header } from "@/components/Elements/Header";
-import { Fv } from "@/features/Reference/Fv";
-import type { FvProps } from "@/features/Reference/Fv";
+import { Fv, FvProps } from "@/features/Reference";
 
 import { Container } from "../Container";
 import { Sidebar } from "../Sidebar";

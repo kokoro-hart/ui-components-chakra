@@ -1,9 +1,8 @@
 import { Box, ChakraProps, Heading, Stack } from "@chakra-ui/react";
 import { FC } from "react";
 
+import { ViewSourceArea } from "@/features/Reference";
 import { getPath } from "@/utils";
-
-import { ViewSourceArea } from "../ViewSourceArea";
 
 import { LoginForm } from "./LoginForm";
 

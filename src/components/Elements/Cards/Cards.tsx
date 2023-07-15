@@ -2,7 +2,7 @@ import { Grid, GridItem, Heading, Stack } from "@chakra-ui/react";
 
 import { uis } from "@/data";
 
-import { Card } from "../Card/Card";
+import { Card } from "./Card";
 
 export const Cards = () => {
   return (

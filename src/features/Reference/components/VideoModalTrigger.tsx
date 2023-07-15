@@ -2,7 +2,7 @@ import { Box, ChakraProps, Heading, Skeleton, VisuallyHidden } from "@chakra-ui/
 import { css } from "@emotion/react";
 import { FC, useReducer, useState } from "react";
 
-import { VideoModal, VideoModalProps } from "../VideoModal/VideoModal";
+import { VideoModal, VideoModalProps } from "./VideoModal";
 
 const inner = css`
   position: relative;

@@ -2,9 +2,9 @@ import { FC } from "react";
 
 import { Head } from "@/components/Layouts/Head";
 import { ReferenceLayout } from "@/components/Layouts/ReferenceLayout";
-import { AccordionResources, fv, resources } from "@/features/Reference/Accordion";
-import { getMetaData } from "@/features/Reference/api";
-import { Nav } from "@/features/Reference/Nav";
+import { AccordionResources, fv, resources } from "@/features/Accordion";
+import { getMetaData } from "@/features/Reference";
+import { Nav } from "@/features/Reference";
 import { MetaData } from "@/features/Reference/types";
 import { getPath } from "@/utils";
 
